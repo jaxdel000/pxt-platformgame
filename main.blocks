@@ -1,0 +1,35 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="?WS%_Ukq}~*r6m|Br{;j">Player</variable><variable type="KIND_SpriteKind" id="$iECKCGB+ycTViJt+1/J">Projectile</variable><variable type="KIND_SpriteKind" id="u6qUZU0aiO,YOmwXd#!m">Food</variable><variable type="KIND_SpriteKind" id="P1u`3^)`Eza=3rV;JCsR">Enemy</variable><variable type="KIND_SpriteKind" id="39n*G%}|GWbG)l]s2{v$">object</variable><variable id="!b,A4DiE]QViv#fshA8m">mySprite</variable><variable id="PYujm4ktzAcIvdvzl`)H">jared</variable><variable id=":^Qs=:NNf2*]w!61*0*K">trampo</variable><variable id="?^q!Ydk!2gm]DEh,!2SU">otherSprite</variable></variables><block type="pxt-on-start" x="10" y="-70"><statement name="HANDLER"><block type="variables_set"><field name="VAR" id="PYujm4ktzAcIvdvzl`)H">jared</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . 5 5 5 . . . . . . . . 
+. . . 5 5 5 5 5 5 5 5 . . . . . 
+. . 5 5 9 5 5 5 5 5 9 5 5 5 . . 
+. 5 5 5 5 9 5 5 5 9 5 5 5 5 5 . 
+. 5 5 5 5 5 9 5 9 5 5 5 5 5 5 5 
+. 5 5 5 9 9 5 5 5 9 9 5 5 5 5 5 
+5 5 5 5 9 9 5 5 5 9 9 5 5 5 5 5 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+5 5 5 5 9 9 9 9 9 9 9 5 5 5 5 5 
+5 5 5 5 9 5 5 5 5 5 9 5 5 5 5 5 
+5 5 5 5 9 5 5 5 5 5 9 5 5 5 5 5 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+. 5 5 5 5 5 5 5 5 5 5 5 5 . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="camerafollow"><value name="sprite"><block type="variables_get"><field name="VAR" id="PYujm4ktzAcIvdvzl`)H">jared</field></block></value><next><block type="Sprite_blockCombine_set"><field name="property">Sprite.ay@set</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="PYujm4ktzAcIvdvzl`)H">jared</field></block></value><value name="value"><shadow type="math_number"><field name="NUM">100</field></shadow></value><next><block type="variables_set"><field name="VAR" id=":^Qs=:NNf2*]w!61*0*K">trampo</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+1 . . . . . . . . . . . . . . 1 
+1 . . . . . . . . . . . . . . 1 
+1 . . . . . . . . . . . . . . 1 
+1 e e e e e e e e e e e e e e 1 
+e 1 f 1 f 1 f 1 f 1 f 1 f 1 f e 
+e f 1 f 1 f 1 f 1 f 1 f 1 f 1 e 
+. e e e e e e e e e e e e e e . 
+. . 1 . . . . . . . . . . 1 . . 
+. 1 . . . . . . . . . . . . 1 . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">object</field></shadow></value></block></value><next><block type="spritesetpos"><value name="sprite"><block type="variables_get"><field name="VAR" id="PYujm4ktzAcIvdvzl`)H">jared</field></block></value><value name="x"><shadow type="positionPicker"><field name="index">300</field></shadow></value><value name="y"><shadow type="positionPicker"><field name="index">400</field></shadow></value><next><block type="spritesetpos"><value name="sprite"><block type="variables_get"><field name="VAR" id=":^Qs=:NNf2*]w!61*0*K">trampo</field></block></value><value name="x"><shadow type="positionPicker"><field name="index">300</field></shadow></value><value name="y"><shadow type="positionPicker"><field name="index">520</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="gameupdate" x="510" y="230"><statement name="HANDLER"><block type="Sprite_blockCombine_change"><field name="property">Sprite.x@set</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="PYujm4ktzAcIvdvzl`)H">jared</field></block></value><value name="value"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="keydx"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation></block></value></block></statement></block><block type="spritesoverlap" x="170" y="370"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value><value name="HANDLER_DRAG_PARAM_otherSprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></shadow></value><value name="otherKind"><shadow type="spritekind"><field name="MEMBER">object</field></shadow></value><statement name="HANDLER"><block type="hudChangeScoreBy"><value name="value"><shadow type="math_number"><field name="NUM">1</field></shadow></value><next><block type="Sprite_blockCombine_set"><field name="property">Sprite.vy@set</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="PYujm4ktzAcIvdvzl`)H">jared</field></block></value><value name="value"><shadow type="math_number"><field name="NUM">-250</field></shadow></value><next><block type="spritesetkind"><value name="sprite"><block type="variables_get"><field name="VAR" id=":^Qs=:NNf2*]w!61*0*K">trampo</field></block></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">object</field></shadow></value><next><block type="Sprite_blockCombine_change"><field name="property">Sprite.x@set</field><value name="mySprite"><block type="variables_get"><field name="VAR" id=":^Qs=:NNf2*]w!61*0*K">trampo</field></block></value><value name="value"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="device_random"><value name="min"><shadow type="math_number"><field name="NUM">-70</field></shadow></value><value name="limit"><shadow type="math_number"><field name="NUM">70</field></shadow></value></block></value><next><block type="Sprite_blockCombine_change"><field name="property">Sprite.y@set</field><value name="mySprite"><block type="variables_get"><field name="VAR" id=":^Qs=:NNf2*]w!61*0*K">trampo</field></block></value><value name="value"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="device_random"><value name="min"><shadow type="math_number"><field name="NUM">-50</field></shadow></value><value name="limit"><shadow type="math_number"><field name="NUM">-60</field></shadow></value></block></value></block></next></block></next></block></next></block></next></block></statement></block></xml>
