@@ -1,32 +1,54 @@
 namespace SpriteKind {
     export const object = SpriteKind.create()
 }
+namespace myTiles {
+    //% blockIdentity=images._tile
+    export const tile0 = img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`
+}
 sprites.onOverlap(SpriteKind.Player, SpriteKind.object, function (sprite, otherSprite) {
     info.changeScoreBy(1)
-    jared.vy = -250
+    jared.vy = -150
     trampo.setKind(SpriteKind.object)
     trampo.x += Math.randomRange(-70, 70)
     trampo.y += Math.randomRange(-50, -60)
+    effects.blizzard.startScreenEffect()
 })
 let trampo: Sprite = null
 let jared: Sprite = null
 jared = sprites.create(img`
-. . . . . 5 5 5 . . . . . . . . 
-. . . 5 5 5 5 5 5 5 5 . . . . . 
-. . 5 5 9 5 5 5 5 5 9 5 5 5 . . 
-. 5 5 5 5 9 5 5 5 9 5 5 5 5 5 . 
-. 5 5 5 5 5 9 5 9 5 5 5 5 5 5 5 
-. 5 5 5 9 9 5 5 5 9 9 5 5 5 5 5 
-5 5 5 5 9 9 5 5 5 9 9 5 5 5 5 5 
-5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
-5 5 5 5 9 9 9 9 9 9 9 5 5 5 5 5 
-5 5 5 5 9 5 5 5 5 5 9 5 5 5 5 5 
-5 5 5 5 9 5 5 5 5 5 9 5 5 5 5 5 
-5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
-5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
-5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
-5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
-. 5 5 5 5 5 5 5 5 5 5 5 5 . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 
+2 2 2 1 1 1 2 2 2 2 2 2 2 2 2 2 
+2 1 1 3 3 3 1 1 1 1 1 1 2 2 2 2 
+1 1 3 3 3 3 3 3 3 3 3 1 1 1 1 1 
+1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 9 9 3 3 3 3 3 3 3 3 3 9 9 3 
+3 9 f f 9 3 3 3 3 3 3 3 9 f f 9 
+3 9 f 1 9 3 9 3 9 3 9 3 9 1 f 9 
+3 3 9 9 3 3 3 9 3 9 3 3 3 9 9 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
 `, SpriteKind.Player)
 scene.cameraFollowSprite(jared)
 jared.ay = 100
@@ -41,15 +63,16 @@ trampo = sprites.create(img`
 1 . . . . . . . . . . . . . . 1 
 1 . . . . . . . . . . . . . . 1 
 1 . . . . . . . . . . . . . . 1 
-1 e e e e e e e e e e e e e e 1 
-e 1 f 1 f 1 f 1 f 1 f 1 f 1 f e 
-e f 1 f 1 f 1 f 1 f 1 f 1 f 1 e 
-. e e e e e e e e e e e e e e . 
+1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 
+3 1 2 1 2 1 2 1 2 1 2 1 2 1 2 3 
+3 2 1 2 1 2 1 2 1 2 1 2 1 2 1 3 
+. 3 3 3 3 3 3 3 3 3 3 3 3 3 3 . 
 . . 1 . . . . . . . . . . 1 . . 
 . 1 . . . . . . . . . . . . 1 . 
 `, SpriteKind.object)
 jared.setPosition(300, 400)
 trampo.setPosition(300, 520)
+jared.say("Let's jump", 1000)
 game.onUpdate(function () {
     jared.x += controller.dx()
 })
