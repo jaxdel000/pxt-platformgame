@@ -1,27 +1,6 @@
 namespace SpriteKind {
     export const object = SpriteKind.create()
 }
-namespace myTiles {
-    //% blockIdentity=images._tile
-    export const tile0 = img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`
-}
 sprites.onOverlap(SpriteKind.Player, SpriteKind.object, function (sprite, otherSprite) {
     info.changeScoreBy(1)
     jared.vy = -150
@@ -36,7 +15,7 @@ jared = sprites.create(img`
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 
 2 2 2 1 1 1 2 2 2 2 2 2 2 2 2 2 
-2 1 1 3 3 3 1 1 1 1 1 1 2 2 2 2 
+2 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 
 1 1 3 3 3 3 3 3 3 3 3 1 1 1 1 1 
 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
 3 3 9 9 3 3 3 3 3 3 3 3 3 9 9 3 
@@ -72,7 +51,8 @@ trampo = sprites.create(img`
 `, SpriteKind.object)
 jared.setPosition(300, 400)
 trampo.setPosition(300, 520)
-jared.say("Let's jump", 1000)
+jared.say("bounce do i yes", 1000)
+info.startCountdown(10)
 game.onUpdate(function () {
     jared.x += controller.dx()
 })
